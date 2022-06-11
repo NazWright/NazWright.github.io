@@ -103,7 +103,6 @@ a {
   box-shadow: 4px 4px 8px rgb(41 41 40);
   border-style: none;
   transition: 0.2s ease-in-out;
-  height: 420px;
 }
 .skills-cards.mobile {
   max-height: 400px;

@@ -1,4 +1,5 @@
-body {
+body,
+main {
   height: 100vh;
 }
 
@@ -41,6 +42,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -49,7 +51,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 1rem;
 }
 
 .nw-nav-column a {
@@ -81,6 +82,75 @@ body {
   transform: scale(0.9);
 }
 
+#nw-home-carousel {
+  height: 80%;
+}
+
+/* home page main content */
+#headline {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#headline h2 {
+  color: #f3bc31;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px #000, 2px 3px 4px #000, 2px 4px 6px #000,
+    2px 5px 8px #000;
+  font-size: 8vmin;
+}
+#headline h3 {
+  color: #fff;
+  font-style: italic;
+  font-size: 4vmin;
+}
+#headline img {
+  position: relative;
+  top: 10px;
+}
+.aboutme-card {
+  border: 0px solid rgb(190, 24, 89);
+  background: transparent;
+}
+.aboutme-card .card-body {
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+}
+.about-me-card .fa-solid {
+  color: #9e78fb;
+  transition: 0.2s ease-in-out;
+  padding: 1rem;
+  position: absolute;
+  font-size: 4vmin;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.about-me-card .fa-solid:hover {
+  color: rgb(241, 175, 12);
+}
+.about-me-card .fa-solid:active {
+  transform: scale(0.9);
+  color: rgb(12, 176, 241);
+  user-select: none;
+}
+
+.about-me-card .fa-circle-arrow-right {
+  right: 0;
+  padding: 1rem;
+  position: absolute;
+}
+.about-me-card .fa-circle-arrow-left {
+  left: 0;
+}
+
+.aboutme-card .row {
+  display: flex;
+  flex-direction: row;
+}
 /* utilities */
 .one-third-w {
   width: 33%;
@@ -90,6 +160,87 @@ body {
 }
 .full-w {
   width: 100%;
+}
+.nw-subheading {
+  color: rgb(158, 120, 251);
+  font: bold 1.5rem / 1 FontAwesome;
+  font-size: 2.5vmin;
+}
+
+.nw-subheading.center {
+  text-align: center;
+}
+
+/* descriptions and small text */
+.nw-small-text-heading {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.nw-small-text-heading.center {
+  text-align: center;
+}
+
+/* text/ site branding colors */
+.nw-grey-text {
+  color: grey;
+}
+
+/* utility classes */
+.nw-text-color-grey {
+  color: grey;
+}
+
+/* for labels of many items, such as each name on grid of proejcts */
+.nw-item-header.desktop {
+  font-size: 1.5vw;
+}
+.nw-item-header.mobile {
+  font-size: 4vw;
+}
+.nw-item-label {
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9e78fb;
+}
+
+/* titles of pages */
+.nw-section-title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.mr-5 {
+  margin-right: 25px;
+}
+
+.full-viewport {
+  height: 100vh;
+}
+
+.nw-hover-fill-primary:hover {
+  color: #9e78fb;
+}
+
+.fluid-width {
+  width: 100%;
+}
+.italicize {
+  font-style: italic;
+}
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.foreground {
+  z-index: 1000;
+}
+
+.nw-item-label.mobile {
+  font-size: 5vw;
 }
 
 /* icons */
@@ -102,9 +253,156 @@ body {
   margin: 1rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  font-size: 3.5vmin;
+  font-size: 2.7vmin;
 }
 .nw-social-icons i:hover {
   color: rgb(241, 175, 12);
   transform: scale(1.5);
+}
+
+/* featured project */
+#featured-project .title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 3px #9e78fb;
+  text-transform: uppercase;
+}
+
+#featured-project .view-projects {
+  color: #f39206;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#featured-project .featured-image {
+  border: 1px solid;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+.featured-image-col {
+  padding: 2.5rem;
+}
+.featured-proj-button {
+  height: 6vmin;
+  background-color: #9e78fb;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 2px 4px rgb(175, 174, 174), 2px 2px 6px rgb(175, 174, 174);
+}
+.featured-proj-button:hover {
+}
+.featured-proj-button:active {
+}
+.app-marketplace-link {
+  cursor: pointer;
+  color: white;
+  font-style: italic;
+  font-size: 2vmin;
+}
+.app-marketplace-link:hover {
+  color: blue;
+  text-decoration: underline;
+}
+#featured-project .card-title {
+  color: #9e78fb;
+  font: 700 normal normal 1.5rem/1 FontAwesome;
+}
+p.card-text {
+  color: grey;
+  font-size: 2vmin;
+}
+.card-featured-proj {
+  right: 100px;
+  box-shadow: -1px 1px 4px rgb(101, 100, 100);
+}
+#featured-project {
+  padding: 2rem;
+}
+
+.intro-heading,
+.skills-header {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.intro-heading {
+  font-size: 35px;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 3px #f39206;
+}
+.features-boxed {
+  padding: 2rem;
+}
+
+.carousel-control-prev-icon {
+  position: absolute;
+  left: 0;
+  margin-left: 1rem;
+}
+.carousel-control-next-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+
+.view-services-link a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.view-services-link svg {
+  fill: white;
+}
+
+.view-services-link:hover a,
+.view-services-link:hover svg {
+  color: blue;
+  fill: blue;
+}
+
+.nw-link {
+  font-size: 2.2vmin;
+}
+
+#resume {
+  padding: 2rem;
+}
+
+#resume iframe {
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-featured-proj {
+    right: 0px;
+  }
+  .featured-image-col {
+    width: 65%;
+  }
+
+  .skills-cards {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .card-featured-proj {
+    bottom: 75px;
+  }
+  .featured-image-col {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .skills-cards {
+    height: 420px;
+  }
 }
