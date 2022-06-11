@@ -25,3 +25,35 @@ body {
   overflow-x: hidden;
   height: 100vh;
 }
+
+/* navigation */
+
+#nw-navigation {
+  display: flex;
+  align-items: center;
+}
+
+#nw-logo-home-link {
+  height: 175px;
+}
+#nw-logo-home-link {
+  transition: 0.3s ease-in-out;
+  transition-delay: 20ms;
+}
+#nw-logo-home-link:hover {
+  transform: scale(1.2);
+}
+#nw-logo-home-link:active {
+  transform: scale(0.9);
+}
+
+/* utilities */
+.one-third-w {
+  width: 33%;
+}
+.one-half-w {
+  width: 50%;
+}
+.full-w {
+  width: 100%;
+}
