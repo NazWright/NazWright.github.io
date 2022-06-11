@@ -114,12 +114,12 @@ main {
   border: 0px solid rgb(190, 24, 89);
   background: transparent;
 }
-.aboutme-card .card-body {
+.aboutmecard .card-body {
   height: 100%;
   background-color: white;
   border-radius: 15px;
 }
-.about-me-card .fa-solid {
+.aboutme-card .fa-solid {
   color: #9e78fb;
   transition: 0.2s ease-in-out;
   padding: 1rem;
@@ -129,21 +129,21 @@ main {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.about-me-card .fa-solid:hover {
+.aboutme-card .fa-solid:hover {
   color: rgb(241, 175, 12);
 }
-.about-me-card .fa-solid:active {
+.aboutme-card .fa-solid:active {
   transform: scale(0.9);
   color: rgb(12, 176, 241);
   user-select: none;
 }
 
-.about-me-card .fa-circle-arrow-right {
+.aboutme-card .fa-circle-arrow-right {
   right: 0;
   padding: 1rem;
   position: absolute;
 }
-.about-me-card .fa-circle-arrow-left {
+.aboutme-card .fa-circle-arrow-left {
   left: 0;
 }
 
