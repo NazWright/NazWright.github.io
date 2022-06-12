@@ -1,104 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" style="height:100vh;">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Home page for Nazere Wright's Software Engineering Portfolio Website." />
-    <link
-      rel="icon"
-      href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Aleo&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Amita&amp;display=swap"
-    />
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <link
-      rel="apple-touch-icon"
-      href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/fonts/ionicons.min.css" />
-    <link rel="stylesheet" href="./assets/css/Contact-Form-Clean.css" />
-    <link rel="stylesheet" href="./assets/css/Features-Boxed.css" />
-    <link rel="stylesheet" href="./assets/css/Footer-Basic.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/Projects-Clean.css" />
-    <link rel="stylesheet" href="./assets/css/Simple-Slider-1.css" />
-    <link rel="stylesheet" href="./assets/css/Simple-Slider.css" />
-    <link rel="stylesheet" href="./assets/css/Social-Icons.css" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>
-      Software Skills
-    </title>
-  </head>
-  <body>
-    <div id="root">
-      <div class="main-app" id="nw-bg-video-wrapper">
-          <!-- video background start -->
-        <video
-        playsInline
-        autoPlay
-        loop
-        muted
-        id="nw-background-video"
-        poster="https://nxwv1images.s3.amazonaws.com/video-background-poster.png"
-      >
-        <source
-          type="video/mp4"
-          src="https://nxwv1images.s3.amazonaws.com/codingvidres.mp4"
-        ></source>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Home page for Nazere Wright's Software Engineering Portfolio Website." />
+  <link rel="icon" href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita&amp;display=swap" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="apple-touch-icon" href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/fonts/ionicons.min.css" />
+  <link rel="stylesheet" href="./assets/css/Contact-Form-Clean.css" />
+  <link rel="stylesheet" href="./assets/css/Features-Boxed.css" />
+  <link rel="stylesheet" href="./assets/css/Footer-Basic.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/Projects-Clean.css" />
+  <link rel="stylesheet" href="./assets/css/Simple-Slider-1.css" />
+  <link rel="stylesheet" href="./assets/css/Simple-Slider.css" />
+  <link rel="stylesheet" href="./assets/css/Social-Icons.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <title>
+    Software Skills
+  </title>
+</head>
+
+<body>
+  <div id="root">
+    <div class="main-app" id="nw-bg-video-wrapper">
+      <!-- video background start -->
+      <video playsInline autoPlay loop muted id="nw-background-video"
+        poster="https://nxwv1images.s3.amazonaws.com/video-background-poster.png">
+        <source type="video/mp4" src="https://nxwv1images.s3.amazonaws.com/codingvidres.mp4">
+        </source>
       </video>
       <!-- video background end -->
 
       <!-- navigation -->
       <nav id="nw-navigation">
         <div class="col-2 nw-nav-column home-column">
-            <a href="./index.html">
-                <img id="nw-logo-home-link" src="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" alt="Nazere Wright's logo & link to home page"/>
-            </a>
+          <a href="./index.html">
+            <img id="nw-logo-home-link" src="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
+              alt="Nazere Wright's logo & link to home page" />
+          </a>
         </div>
         <div class="col-8 nw-nav-column">
-           <div class="nw-nav-column-link">
-               <a href="./projects.html">Projects</a>
-           </div>
-           <div class="nw-nav-column-link">
+          <div class="nw-nav-column-link">
+            <a href="./projects.html">Projects</a>
+          </div>
+          <div class="nw-nav-column-link">
             <a href="./skills.html">Skills</a>
-        </div>
-        <div class="nw-nav-column-link">
+          </div>
+          <div class="nw-nav-column-link">
             <a href="./contact.html">Contact</a>
-        </div>
-        <div class="nw-nav-column-link">
+          </div>
+          <div class="nw-nav-column-link">
             <a href="https://medium.com/@nazwrightthedeveloper" target="_blank">Blog</a>
-        </div>
+          </div>
         </div>
         <div class="col-2 nw-nav-column">
-            <div class="nw-social-icons">
-               <a href="https://github.com/NazWright" target="_blank"> <i class="fa fa-github-square"></i></a>
-                <a href="https://www.linkedin.com/in/nazere-wright-the-dev/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/nazwrightthedev/" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+          <div class="nw-social-icons">
+            <a href="https://github.com/NazWright" target="_blank"> <i class="fa fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/nazere-wright-the-dev/" target="_blank"><i
+                class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/nazwrightthedev/" target="_blank"><i class="fa fa-instagram"></i></a>
+          </div>
         </div>
 
       </nav>
@@ -106,218 +82,212 @@
       <!-- main content -->
       <main id="skills-content">
         <div class="row flex-row flex-wrap d-flex justify-space-around">
-         <div class="col-12 d-flex justify-content-center">
-          <h1 class="skills-header mb-5 nw-section-title">Skills</h1>
-         </div>
-
-      
-            <!-- Progress bar 1 -->
-            <div class="pb-col col-6 justify-content-center mb-5"> 
-              <div class="justify-content-center text-align-center">
-                <h2 class="nw-item-label">Front-end Web Development <button><i class="fa-solid fa-circle-down me-2" id="toggleDropdown"></i> Learn more</button></h2>
-                <div class="card mb-2 progress-dropdown-card hide">
-                  <div class="card-header nw-subheading">
-                    Front-end Web Development
-                  </div>
-                  <div class="card-body nw-small-text-heading nw-grey-text">
-                    <div class="mb-3"> Proficient in providing users with beautiful, user-friendly experiences through websites and web applications.</div>
-                    <div>
-                      <strong>Technologies:</strong>
-                      <span>
-                        <i class="fa fa-react me-2"></i>
-                        <i class="fa fa-js me-2"></i>
-                        <i class="fa fa-html5 me-2"></i>
-                        <i class="fa fa-css3 me-2"></i>
-                        <i class="fa fa-jquery"></i>
-                        <i class="fab fa-elementor"></i>
-                        <i class="fab fa-wordpress"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: rgb(241, 175, 12);"></div>
-                </div>
-              </div>
-            </div>
-
-   
-
-             <!-- Progress bar 2-->
-             <div class="pb-col col-6 justify-content-center mb-5"> 
-              <div class="justify-content-center text-align-center">
-                <h2 class="nw-item-label">Back-end Web Development <button><i class="fa-solid fa-circle-down ms-2"></i> Learn more</button></h2>
-                <div class="card mb-2 progress-dropdown-card hide">
-                  <div class="card-header nw-subheading">
-                    Back-end Web Development
-                  </div>
-                  <div class="card-body nw-small-text-heading nw-grey-text">
-                    <div class="mb-3"> Experienced in making websites and web applications functional using APIs and/or microservices.</div>
-                    <div>
-                      <strong>Technologies:</strong>
-                      <span>
-                        <i class="fa fa-java me-2"></i>
-                        <i class="fa fa-node me-2"></i>
-                        <i class="fab fa-python"></i>
-                        <i class="fab fa-php"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: rgb(152, 71, 190);"></div>
-                </div>
-              </div>
-            </div>
-
-             <!-- Progress bar 3 -->
-             <div class="pb-col col-6 justify-content-center mb-5"> 
-              <div class="justify-content-center text-align-center">
-                <h2 class="nw-item-label">Software Testing <button><i class="fa-solid fa-circle-down ms-2"></i> Learn more</button></h2>
-                <!-- dropdown -->
-                <div class="card mb-2 progress-dropdown-card hide">
-                  <div class="card-header nw-subheading">
-                    Software Testing
-                  </div>
-                  <div class="card-body nw-small-text-heading nw-grey-text">
-                    <div class="mb-3"> Knowledge of designing & testing the usability of software systems by creating custom programs.</div>
-                    <div>
-                      <strong>Technologies:</strong>
-                      <span>
-                        <i class="fab fa-java me-2"></i>
-                        <i class="fab fa-react me-2"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- dropdown end -->
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: rgb(12, 176, 241);"></div>
-                </div>
-              </div>
-            </div>
-
-             <!-- Progress bar 4 -->
-             <div class="pb-col col-6 justify-content-center mb-5"> 
-              <div class="justify-content-center text-align-center">
-                <h2 class="nw-item-label">Databases <button><i class="fa-solid fa-circle-down ms-2"></i> Learn more</button></h2>
-                <!-- dropdown -->
-                <div class="card mb-2 progress-dropdown-card hide">
-                  <div class="card-header nw-subheading">
-                    Databases
-                  </div>
-                  <div class="card-body nw-small-text-heading nw-grey-text">
-                    <div class="mb-3"> Experienced in designing, implementing, maintaining & improving database systems.</div>
-                    <div>
-                      <strong>Technologies:</strong>
-                      <span>
-                        <i class="fab fa-database me-2"></i>
-                        <i class="fab fa-aws"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- dropdown end -->
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: #9e78fb;"></div>
-                </div>
-              </div>
-            </div>
-
-             <!-- Progress bar 5 -->
-             <div class="pb-col col-6 justify-content-center mb-5"> 
-              <div class="justify-content-center text-align-center">
-                <h2 class="nw-item-label">Game Development <button><i class="fa-solid fa-circle-down ms-2"></i> Learn more</button></h2>
-                <!-- dropdown -->
-                <div class="card mb-2 progress-dropdown-card hide">
-                  <div class="card-header nw-subheading">
-                    Game Development
-                  </div>
-                  <div class="card-body nw-small-text-heading nw-grey-text">
-                    <div class="mb-3"> Ability to create the base engine of a game, design characters & storylines, and provide players with memorable gameplay.</div>
-                    <div>
-                      <strong>Technologies:</strong>
-                      <span>
-                        <i class="fa fa-unity me-2"></i>
-                        <i class="fa fa-c me-2"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- dropdown end -->
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: pink;"></div>
-                </div>
-              </div>
-            </div>
-
-
-               <!-- Progress bar 6 -->
-               <div class="pb-col col-6 justify-content-center mb-5"> 
-                <div class="justify-content-center text-align-center">
-                  <h2 class="nw-item-label">Source Control <button><i class="fa-solid fa-circle-down ms-2"></i> Learn more</button></h2>
-                  <!-- dropdown -->
-                  <div class="card mb-2 progress-dropdown-card hide">
-                    <div class="card-header nw-subheading">
-                      Source Control
-                    </div>
-                    <div class="card-body nw-small-text-heading nw-grey-text">
-                      <div class="mb-3"> Ability to implement and use source control & version control systems.</div>
-                      <div>
-                        <strong>Technologies:</strong>
-                        <span>
-                          <i class="fa fa-github me-2"></i>
-                          <i class="fa fa-atlassian me-2"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- dropdown end -->
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: lawngreen;"></div>
-                  </div>
-                </div>
-              </div>
-              
-    
+          <div class="col-12 d-flex justify-content-center">
+            <h1 class="skills-header mb-5 nw-section-title">Skills</h1>
           </div>
+
+
+          <!-- Progress bar 1 -->
+          <div class="pb-col col-6 justify-content-center mb-5">
+            <div class="justify-content-center text-align-center">
+              <h2 class="nw-item-label">Front-end Web Development <button><i class="fa-solid fa-circle-down me-2"
+                    id="toggleDropdown"></i> Learn more</button></h2>
+              <div class="card mb-2 progress-dropdown-card hide">
+                <div class="card-header nw-subheading">
+                  Front-end Web Development
+                </div>
+                <div class="card-body nw-small-text-heading nw-grey-text">
+                  <div class="mb-3"> Proficient in providing users with beautiful, user-friendly experiences through
+                    websites and web applications.</div>
+                  <div>
+                    <strong>Technologies:</strong>
+                    <span>
+                      <i class="fa fa-react me-2"></i>
+                      <i class="fa fa-js me-2"></i>
+                      <i class="fa fa-html5 me-2"></i>
+                      <i class="fa fa-css3 me-2"></i>
+                      <i class="fa fa-jquery"></i>
+                      <i class="fab fa-elementor"></i>
+                      <i class="fab fa-wordpress"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 0%; background-color: rgb(241, 175, 12);"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Progress bar 2-->
+          <div class="pb-col col-6 justify-content-center mb-5">
+            <div class="justify-content-center text-align-center">
+              <h2 class="nw-item-label">Back-end Web Development <button><i class="fa-solid fa-circle-down ms-2"></i>
+                  Learn more</button></h2>
+              <div class="card mb-2 progress-dropdown-card hide">
+                <div class="card-header nw-subheading">
+                  Back-end Web Development
+                </div>
+                <div class="card-body nw-small-text-heading nw-grey-text">
+                  <div class="mb-3"> Experienced in making websites and web applications functional using APIs and/or
+                    microservices.</div>
+                  <div>
+                    <strong>Technologies:</strong>
+                    <span>
+                      <i class="fa fa-java me-2"></i>
+                      <i class="fa fa-node me-2"></i>
+                      <i class="fab fa-python"></i>
+                      <i class="fab fa-php"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 0%; background-color: rgb(152, 71, 190);"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress bar 3 -->
+          <div class="pb-col col-6 justify-content-center mb-5">
+            <div class="justify-content-center text-align-center">
+              <h2 class="nw-item-label">Software Testing <button><i class="fa-solid fa-circle-down ms-2"></i> Learn
+                  more</button></h2>
+              <!-- dropdown -->
+              <div class="card mb-2 progress-dropdown-card hide">
+                <div class="card-header nw-subheading">
+                  Software Testing
+                </div>
+                <div class="card-body nw-small-text-heading nw-grey-text">
+                  <div class="mb-3"> Knowledge of designing & testing the usability of software systems by creating
+                    custom programs.</div>
+                  <div>
+                    <strong>Technologies:</strong>
+                    <span>
+                      <i class="fab fa-java me-2"></i>
+                      <i class="fab fa-react me-2"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- dropdown end -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 0%; background-color: rgb(12, 176, 241);"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress bar 4 -->
+          <div class="pb-col col-6 justify-content-center mb-5">
+            <div class="justify-content-center text-align-center">
+              <h2 class="nw-item-label">Databases <button><i class="fa-solid fa-circle-down ms-2"></i> Learn
+                  more</button></h2>
+              <!-- dropdown -->
+              <div class="card mb-2 progress-dropdown-card hide">
+                <div class="card-header nw-subheading">
+                  Databases
+                </div>
+                <div class="card-body nw-small-text-heading nw-grey-text">
+                  <div class="mb-3"> Experienced in designing, implementing, maintaining & improving database systems.
+                  </div>
+                  <div>
+                    <strong>Technologies:</strong>
+                    <span>
+                      <i class="fab fa-database me-2"></i>
+                      <i class="fab fa-aws"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- dropdown end -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 0%; background-color: #9e78fb;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress bar 5 -->
+          <div class="pb-col col-6 justify-content-center mb-5">
+            <div class="justify-content-center text-align-center">
+              <h2 class="nw-item-label">Game Development <button><i class="fa-solid fa-circle-down ms-2"></i> Learn
+                  more</button></h2>
+              <!-- dropdown -->
+              <div class="card mb-2 progress-dropdown-card hide">
+                <div class="card-header nw-subheading">
+                  Game Development
+                </div>
+                <div class="card-body nw-small-text-heading nw-grey-text">
+                  <div class="mb-3"> Ability to create the base engine of a game, design characters & storylines, and
+                    provide players with memorable gameplay.</div>
+                  <div>
+                    <strong>Technologies:</strong>
+                    <span>
+                      <i class="fa fa-unity me-2"></i>
+                      <i class="fa fa-c me-2"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- dropdown end -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: pink;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
         </div>
-        
-        <!-- end main content -->
-      </main>
-      </div>
     </div>
 
-    <script src="./js/main.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-    <script src="./js/progressBar.js"></script>
+    <!-- end main content -->
+    </main>
+  </div>
+  </div>
 
-    <script>
-      const progressBars = document.querySelectorAll(".pb-col");
-      let pbCard;
-      progressBars.forEach((progressBar) => {
-        progressBar.addEventListener("click", (event) => {
-          pbCard = $(progressBar).find(".progress-dropdown-card")[0];
-          if(event.target.classList.contains("fa-circle-down")){
-            $(pbCard).removeClass("hide");
-            $(pbCard).addClass("show");
-            $(event.target).removeClass("fa-circle-down");
-            $(event.target).addClass("fa-circle-up");
-          }
-          else if (event.target.classList.contains("fa-circle-up")){
-            $(pbCard).removeClass("show");
-            $(pbCard).addClass("hide");
-            $(event.target).removeClass("fa-circle-up");
-            $(event.target).addClass("fa-circle-down");
-          }
-        })
+  <script src="./js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="./js/progressBar.js"></script>
+
+  <script>
+    const progressBars = document.querySelectorAll(".pb-col");
+    let pbCard;
+    progressBars.forEach((progressBar) => {
+      progressBar.addEventListener("click", (event) => {
+        pbCard = $(progressBar).find(".progress-dropdown-card")[0];
+        if (event.target.classList.contains("fa-circle-down")) {
+          $(pbCard).removeClass("hide");
+          $(pbCard).addClass("show");
+          $(event.target).removeClass("fa-circle-down");
+          $(event.target).addClass("fa-circle-up");
+        }
+        else if (event.target.classList.contains("fa-circle-up")) {
+          $(pbCard).removeClass("show");
+          $(pbCard).addClass("hide");
+          $(event.target).removeClass("fa-circle-up");
+          $(event.target).addClass("fa-circle-down");
+        }
       })
-    </script>
-    
-  </body>
+    })
+  </script>
+
+</body>
+
 </html>

@@ -249,7 +249,8 @@ main {
 }
 
 /* featured project */
-#featured-project .title {
+#featured-project .title,
+#projects-gallery .title {
   color: #fff;
   font-size: 35px;
   font-weight: 700;
@@ -580,6 +581,12 @@ select.nw-form-control {
   .contact-me-header {
     font-size: 10vmin !important;
   }
+  #projectsCarousel {
+    display: none;
+  }
+  #mobileCarousel {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 1000px) {
@@ -605,6 +612,10 @@ select.nw-form-control {
   }
   .nw-subheading {
     font-size: 2vmin;
+  }
+
+  .default-project-content .nw-item-label {
+    font-size: 3.5vmin !important;
   }
 }
 
@@ -635,6 +646,12 @@ select.nw-form-control {
   }
 }
 
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+  .project-container .col-9 {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width: 700px) and (max-width: 1020px) {
   .progress-dropdown-card .nw-subheading {
     font-size: 3.4vmin;
@@ -645,4 +662,95 @@ select.nw-form-control {
   .progress-dropdown-card .nw-subheading {
     font-size: 2.4vmin;
   }
+  #mobileCarousel {
+    display: none;
+  }
+  .project-card {
+    width: 90%;
+  }
+}
+
+.project-container {
+  padding: 0.5rem 3rem 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px #add8e6;
+  margin: 1rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.project-card img {
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgb(62 60 60) 2px 3.5px 3px;
+}
+
+.nw-item-label {
+  color: #9e78fb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.project-heading {
+  font-size: 3vmin;
+  font-weight: bold;
+  height: 60px;
+  padding: 1rem;
+  font-style: italic;
+}
+
+.stars {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  color: gray;
+  font-size: 4vmin;
+}
+.github-link-container a {
+  color: black;
+}
+.github-link-container a:hover {
+  color: #9e78fb;
+}
+
+.github-link-container:hover {
+  text-decoration: underline;
+  color: #9e78fb;
+}
+
+.nw-button {
+  background-color: #9e78fb;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 2px 3px 2px #000;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  height: 8vh;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
+
+.project-description {
+  font-size: 2.2vmin;
+  font-weight: 600;
+}
+
+.project-card > .card-body {
+  padding: 0;
+}
+
+.default-project-content .nw-grey-text {
+  font-size: 2vmin;
 }

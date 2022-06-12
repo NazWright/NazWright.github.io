@@ -1,117 +1,830 @@
 <!DOCTYPE html>
 <html lang="en" style="height:100vh;">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Home page for Nazere Wright's Software Engineering Portfolio Website." />
-    <link
-      rel="icon"
-      href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Aleo&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Amita&amp;display=swap"
-    />
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <link
-      rel="apple-touch-icon"
-      href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/fonts/ionicons.min.css" />
-    <link rel="stylesheet" href="./assets/css/Contact-Form-Clean.css" />
-    <link rel="stylesheet" href="./assets/css/Features-Boxed.css" />
-    <link rel="stylesheet" href="./assets/css/Footer-Basic.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/Projects-Clean.css" />
-    <link rel="stylesheet" href="./assets/css/Simple-Slider-1.css" />
-    <link rel="stylesheet" href="./assets/css/Simple-Slider.css" />
-    <link rel="stylesheet" href="./assets/css/Social-Icons.css" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>
-      Software Development Projects
-    </title>
-  </head>
-  <body>
-    <div id="root">
-      <div class="main-app" id="nw-bg-video-wrapper">
-          <!-- video background start -->
-        <video
-        playsInline
-        autoPlay
-        loop
-        muted
-        id="nw-background-video"
-        poster="https://nxwv1images.s3.amazonaws.com/video-background-poster.png"
-      >
-        <source
-          type="video/mp4"
-          src="https://nxwv1images.s3.amazonaws.com/codingvidres.mp4"
-        ></source>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Home page for Nazere Wright's Software Engineering Portfolio Website." />
+  <link rel="icon" href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita&amp;display=swap" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="apple-touch-icon" href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/fonts/ionicons.min.css" />
+  <link rel="stylesheet" href="./assets/css/Contact-Form-Clean.css" />
+  <link rel="stylesheet" href="./assets/css/Features-Boxed.css" />
+  <link rel="stylesheet" href="./assets/css/Footer-Basic.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/Projects-Clean.css" />
+  <link rel="stylesheet" href="./assets/css/Simple-Slider-1.css" />
+  <link rel="stylesheet" href="./assets/css/Simple-Slider.css" />
+  <link rel="stylesheet" href="./assets/css/Social-Icons.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <title>
+    Software Development Projects
+  </title>
+</head>
+
+<body id="projects-body">
+  <div id="root">
+    <div class="main-app" id="nw-bg-video-wrapper">
+      <!-- video background start -->
+      <video playsInline autoPlay loop muted id="nw-background-video"
+        poster="https://nxwv1images.s3.amazonaws.com/video-background-poster.png">
+        <source type="video/mp4" src="https://nxwv1images.s3.amazonaws.com/codingvidres.mp4">
+        </source>
       </video>
       <!-- video background end -->
 
       <!-- navigation -->
       <nav id="nw-navigation">
         <div class="col-2 nw-nav-column home-column">
-            <a href="./index.html">
-                <img id="nw-logo-home-link" src="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" alt="Nazere Wright's logo & link to home page"/>
-            </a>
+          <a href="./index.html">
+            <img id="nw-logo-home-link" src="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
+              alt="Nazere Wright's logo & link to home page" />
+          </a>
         </div>
         <div class="col-8 nw-nav-column">
-           <div class="nw-nav-column-link">
-               <a href="./projects.html">Projects</a>
-           </div>
-           <div class="nw-nav-column-link">
+          <div class="nw-nav-column-link">
+            <a href="./projects.html">Projects</a>
+          </div>
+          <div class="nw-nav-column-link">
             <a href="./skills.html">Skills</a>
-        </div>
-        <div class="nw-nav-column-link">
+          </div>
+          <div class="nw-nav-column-link">
             <a href="./contact.html">Contact</a>
-        </div>
-        <div class="nw-nav-column-link">
+          </div>
+          <div class="nw-nav-column-link">
             <a href="https://medium.com/@nazwrightthedeveloper" target="_blank">Blog</a>
-        </div>
+          </div>
         </div>
         <div class="col-2 nw-nav-column">
-            <div class="nw-social-icons">
-               <a href="https://github.com/NazWright" target="_blank"> <i class="fa fa-github-square"></i></a>
-                <a href="https://www.linkedin.com/in/nazere-wright-the-dev/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/nazwrightthedev/" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
+          <div class="nw-social-icons">
+            <a href="https://github.com/NazWright" target="_blank"> <i class="fa fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/nazere-wright-the-dev/" target="_blank"><i
+                class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/nazwrightthedev/" target="_blank"><i class="fa fa-instagram"></i></a>
+          </div>
         </div>
 
       </nav>
 
       <!-- main content -->
       <main id="content">
-        <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="projects-gallery" class="d-flex justify-content-center">
+          <h2 class="title">Projects</h2>
+        </div>
+        <!-- carousel -->
+        <div id="projectsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <!-- headline -->
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="4000" >
-               <section>
-                
+            <div class="carousel-item active" data-bs-interval="4000">
+              <section>
+                <div class="row project-container">
+                  <!-- project 1 -->
+                  <div class="col-4">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/featuredProjectWireFrame.png"
+                              alt="Image of the home page for Omnivore Connect Marketplace" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Omnivore Connect Marketplace
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Omnivore Connect Marketplace allows you to learn more about Omnivore's partners.
+                            Omnivore's Connect API allows you to leverage cutting-edge apps for your POS system all
+                            through one API. There are over 180 applications that streamline operations, enhance
+                            customer
+                            experience and increase profits.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://omnivoredev.wpengine.com/connect-marketplace/"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- project 2 -->
+                  <div class="col-4">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/ReactPPLC.png"
+                              alt="Image of the GitHub repository page for React ATS" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              React ATS
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The React Applicant Tracking System is an HR software constructed entirely in JavaScript.
+                            The ATS provides many functions such as creating an integrated job board for your company,
+                            managing candidates through any step of the hiring process, and managing internal
+                            organizations for employees.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/React-PeopleCount"
+                              class="link-icon-text desktop ms-1">GitHub</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- project 3 -->
+                  <div class="col-4">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/sanctions.png"
+                              alt="Image of the GitHub repository page for React ATS" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Sanctioning Detection System
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Sanctioning Dectection System is a program constructed to detect the exact percentage
+                            similarity of any given name on a U.S. economic sanctions list. The program takes in any
+                            name as an input and returns the percentage of similarity to names on a predefined list.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/Sanctioning-Detection-System"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <!-- end carousel slide -->
               </section>
+            </div>
+
+            <!-- carousel slide -->
+            <div class="carousel-item" data-bs-interval="4000">
+              <section>
+                <div class="row project-container">
+                  <!-- project 4 -->
+                  <div class="col-4">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/images/client-server.png"
+                              alt="Client-Server Networking Stock Image" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Client-Server Networking Program
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Client Server Networking Program is a simple application that requires one server to
+                            guess a random integer that is provided by a client or another communicating server. The
+                            server only has a predefined number of attempts to guess the number correctly before the
+                            connection is interrupted.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/Socket_Program_Networking_Systems_1"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-4">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/cloudcompute.png"
+                              alt="Cloud Computing Stock Image" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Cloud Computing Alert System
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Cloud Computing Alert System is a simulation to a cloud server resource utilization
+                            alert system. The simulation manages the CPU & Disk health of a system of servers. If these
+                            resources are suddenly overused, this could indicate suspicious activity on the server. The
+                            program automates alerts to help detect these instances of suspicious activity.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/Cloud-Computing-Alert-System"
+                              class="link-icon-text desktop ms-1">GitHub</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- project 6 -->
+                  <div class="col-4">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/Screen+Shot+2022-06-12+at+5.27.55+PM.png"
+                              alt="Image of the home page of Nazere Wright's React portfolio for a Software Engineer."
+                              width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Nazere Wright v1 (React App Version)
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            Nazere Wright v1 is a Software Engineering portfolio created using <a>Create React App</a>.
+                            This portofolio includes a projects gallery, a video game inspired skills proficiency page,
+                            a blog and a contact form. Perfect for software engineers look for a creative template for
+                            their own portfolio. This demo version implements an API to show how the project rating
+                            system & contact form submission would work.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://nazere-wright-v1.herokuapp.com"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                </div>
+              </section>
+
+
+              <!-- end carousel content -->
+            </div>
+
+            <!-- carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+          </div>
+          <!-- end carousel -->
+
+        </div>
+        <!-- carousel -->
+        <div id="mobileCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- headline -->
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <section>
+
+                <div class="row project-container">
+                  <div class="col-9 justify-content-center">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/featuredProjectWireFrame.png"
+                              alt="Image of the home page for Omnivore Connect Marketplace" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Omnivore Connect Marketplace
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Omnivore Connect Marketplace allows you to learn more about Omnivore's partners.
+                            Omnivore's Connect API allows you to leverage cutting-edge apps for your POS system all
+                            through one API. There are over 180 applications that streamline operations, enhance
+                            customer
+                            experience and increase profits.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://omnivoredev.wpengine.com/connect-marketplace/"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+            </div>
+
+            <div class="carousel-item " data-bs-interval="4000">
+              <section>
+
+                <div class="row project-container">
+                  <!-- project 2 -->
+                  <div class="col-9 justify-content-center">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/ReactPPLC.png"
+                              alt="Image of the GitHub repository page for React ATS" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              React ATS
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The React Applicant Tracking System is an HR software constructed entirely in JavaScript.
+                            The ATS provides many functions such as creating an integrated job board for your company,
+                            managing candidates through any step of the hiring process, and managing internal
+                            organizations for employees.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/React-PeopleCount"
+                              class="link-icon-text desktop ms-1">GitHub</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+            </div>
+
+
+
+            <div class="carousel-item" data-bs-interval="4000">
+              <section>
+
+                <div class="row project-container">
+                  <!-- project 3 -->
+                  <div class="col-9 justify-content-center">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/sanctions.png"
+                              alt="Image of the GitHub repository page for React ATS" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Sanctioning Detection System
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Sanctioning Dectection System is a program constructed to detect the exact percentage
+                            similarity of any given name on a U.S. economic sanctions list. The program takes in any
+                            name as an input and returns the percentage of similarity to names on a predefined list.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/Sanctioning-Detection-System"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+            </div>
+
+
+
+            <div class="carousel-item" data-bs-interval="4000">
+              <section>
+
+                <div class="row project-container">
+                  <!-- project 4 -->
+                  <div class="col-9 justify-content-center">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/images/client-server.png"
+                              alt="Client-Server Networking Stock Image" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Client-Server Networking Program
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Client Server Networking Program is a simple application that requires one server to
+                            guess a random integer that is provided by a client or another communicating server. The
+                            server only has a predefined number of attempts to guess the number correctly before the
+                            connection is interrupted.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/Socket_Program_Networking_Systems_1"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+            </div>
+
+
+            <div class="carousel-item" data-bs-interval="4000">
+              <section>
+
+                <div class="row project-container">
+                  <div class="col-9 justify-content-center">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/cloudcompute.png"
+                              alt="Cloud Computing Stock Image" width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Cloud Computing Alert System
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            The Cloud Computing Alert System is a simulation to a cloud server resource utilization
+                            alert system. The simulation manages the CPU & Disk health of a system of servers. If
+                            these
+                            resources are suddenly overused, this could indicate suspicious activity on the server.
+                            The
+                            program automates alerts to help detect these instances of suspicious activity.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://github.com/NazWright/Cloud-Computing-Alert-System"
+                              class="link-icon-text desktop ms-1">GitHub</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+            </div>
+
+
+            <div class="carousel-item" data-bs-interval="4000">
+              <section>
+
+                <div class="row project-container">
+                  <!-- project 6 -->
+                  <div class="col-9 justify-content-center">
+                    <div class="card project-card">
+                      <div class="card-body">
+                        <div class="default-project-content">
+                          <div class="mb-3">
+                            <img src="https://nxwv1images.s3.amazonaws.com/Screen+Shot+2022-06-12+at+5.27.55+PM.png"
+                              alt="Image of the home page of Nazere Wright's React portfolio for a Software Engineer."
+                              width="100%" height="250" />
+                          </div>
+                          <div class="mb-5">
+                            <h2 class="nw-item-label project-heading">
+                              Nazere Wright v1 (React App Version)
+                            </h2>
+                          </div>
+                          <div class="justify-content-center d-flex mb-1"><span
+                              class=" nw-grey-text nw-small-text-heading" style="font-weight: bold;">Care
+                              to rate this project?</span>
+                          </div>
+                          <div id="stars" class="stars project-stars mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+
+                        <div class="clicked-body mb-3 clicked-project-content" style="display:none;">
+                          <p class="project-description">
+                            Nazere Wright v1 is a Software Engineering portfolio created using <a>Create React
+                              App</a>.
+                            This portofolio includes a projects gallery, a video game inspired skills proficiency
+                            page,
+                            a blog and a contact form. Perfect for software engineers look for a creative template for
+                            their own portfolio. This demo version implements an API to show how the project rating
+                            system & contact form submission would work.
+                          </p>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="github-link-container nw-icon desktop"><svg stroke="currentColor"
+                              fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="github-link-icon"
+                              height="1.5vw" width="1.5vw" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg><a href="https://nazere-wright-v1.herokuapp.com"
+                              class="link-icon-text desktop ms-1">Website</a></div>
+                        </div>
+
+                        <button class="nw-button mb-1 view-description">View Description</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+
             </div>
 
 
@@ -119,24 +832,60 @@
           </div>
 
           <!-- carousel controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#mobileCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#mobileCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
 
-          <!-- end carousel -->
         </div>
-       
-        <!-- end main content -->
+        <!-- end carousel -->
       </main>
-      </div>
+      <!-- end main content -->
     </div>
+  </div>
 
-    <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-  </body>
+  <script src="./js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="./js/stars.js"></script>
+  <script type="text/javascript">
+    // get all the cards
+    // add event listener to each card
+
+    const cards = document.getElementsByClassName('project-card');
+    for (let card of cards) {
+      card.addEventListener("click", function () {
+        if (!event.target.classList.contains("view-description")) return;
+
+        let defaultProjectContent = $(card).find(".default-project-content");
+        let clickedProjectContent = $(card).find(".clicked-project-content");
+
+        console.log(clickedProjectContent)
+
+        if (defaultProjectContent.css("display") === "block") {
+          defaultProjectContent.css("display", "none");
+          clickedProjectContent.css("display", "block");
+          return;
+        }
+
+        if (clickedProjectContent.css("display") === "block") {
+          clickedProjectContent.css("display", "none");
+          defaultProjectContent.css("display", "block");
+          return;
+        }
+
+      })
+    }
+
+
+    // 
+  </script>
+
+</body>
+
 </html>
