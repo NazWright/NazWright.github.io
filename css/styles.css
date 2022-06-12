@@ -47,6 +47,9 @@ main {
   .nw-subheading {
     font-size: 5vmin;
   }
+  #contact-form .col-6 {
+    width: 100%;
+  }
 }
 
 #nw-navigation .nw-nav-column {
