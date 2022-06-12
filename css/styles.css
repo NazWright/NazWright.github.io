@@ -202,6 +202,7 @@ main {
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: #9e78fb;
+  font-size: 3.5vmin;
 }
 
 /* titles of pages */
@@ -396,8 +397,12 @@ p.card-text {
   .card-featured-proj {
     bottom: 75px;
   }
-  .featured-image-col {
+  .featured-image-col,
+  .pb-col {
     width: 100%;
+  }
+  .nw-social-icons i {
+    font-size: 3.7vmin;
   }
 }
 
@@ -405,4 +410,135 @@ p.card-text {
   .skills-cards {
     height: 420px;
   }
+}
+
+/*  */
+
+/* form */
+.nw-form-control {
+  outline: none;
+  border: none;
+  background-color: rgb(226, 234, 236);
+  border-radius: 5px;
+  height: 50px;
+  color: grey;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+}
+
+.nw-form-control::placeholder {
+  color: grey;
+}
+.nw-form-control:focus {
+  outline: none;
+  border: none;
+  background-color: rgb(158, 120, 251);
+  color: white;
+  font-weight: bold;
+  box-shadow: 3px 3px 2px black;
+}
+.nw-form-control:focus::placeholder {
+  color: white;
+}
+
+.nw-show-password label {
+  color: white;
+  font-style: italic;
+  font-weight: 800;
+  margin-left: 0.5rem;
+}
+
+textarea.nw-form-control {
+  height: 21vh;
+}
+select.nw-form-control {
+  padding: 0.5rem;
+}
+/* buttons */
+.nw-button {
+  font-weight: bold;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 2px 3px 2px black;
+  background-color: #9e78fb;
+  text-transform: capitalize;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  height: 8vh;
+}
+
+.nw-button:hover {
+  background-color: rgb(241, 175, 12);
+}
+.contact-me-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #9e78fb;
+  text-shadow: 2px 3px 3px black;
+  font-size: 7vmin;
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.contact-wrapper .card {
+  width: 70%;
+  border-radius: 15px;
+}
+
+.contact-wrapper .card .card-body {
+  padding: 2rem;
+}
+
+.contact-wrapper.mobile {
+  padding-bottom: 10%;
+}
+
+.contact-me-form {
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.skills-header {
+  color: white;
+  text-shadow: 3px 3px 3px lightblue;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.progress-ol-ol {
+  border-radius: 10px;
+  height: 100%;
+  width: 0%;
+  position: relative;
+  transition: 2s ease;
+  transition-delay: 0.5s;
+  box-shadow: 1px 1px 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.dropdown-icon {
+  transition: 500ms ease-in-out;
+}
+
+.dropdown-icon:hover {
+  fill: rgb(47, 185, 240);
+}
+
+#skills-content > div {
+  overflow: hidden;
+  padding: 0px 3rem;
+}
+.progress {
+  height: 6vmin;
+  border-radius: 16px;
+  box-shadow: 4px 4px 3px black;
 }

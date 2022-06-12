@@ -105,7 +105,59 @@
 
       <!-- main content -->
       <main id="content">
-        
+        <div class="contact-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <h1 class="contact-me-header nw-section-title">Contact Me</h1>
+            </div>
+            <div class="card-body">
+              <form id="contact-form">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="nw-form-control" placeholder="Name" name="name" />
+                  </div>
+                  <div class="col">
+                    <input type="tel" class="nw-form-control" placeholder="Phone" name="phone" />
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <input type="email" class="nw-form-control" placeholder="Email" name="email" required />
+                    </div>
+                    <div class="col">
+                      <select class="nw-form-control" name="reason" required>
+                        <option selected disabled hidden> Why are you reaching out? </option>
+                        <option> Website or Mobile inquiry</option>
+                        <option> Website Review</option>
+                        <option> Other</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <textarea placeholder="Notes" name="notes" class="nw-form-control"></textarea>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 nw-nav-column">
+                    <div class="nw-social-icons">
+                       <a href="https://github.com/NazWright" target="_blank"> <i class="fa fa-github-square"></i></a>
+                        <a href="https://www.linkedin.com/in/nazere-wright-the-dev/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nazwrightthedev/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 d-flex justify-content-end">
+                  <button class="nw-button">Send Message</button>
+              </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
        
         <!-- end main content -->
       </main>
