@@ -31,27 +31,6 @@ main {
   align-items: center;
 }
 
-@media only screen and (max-width: 1000px) {
-  #nw-navigation {
-    display: block;
-  }
-  #nw-navigation .home-column {
-    width: 100%;
-  }
-  #nw-navigation .nw-nav-column {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-  .nw-subheading {
-    font-size: 5vmin;
-  }
-  #contact-form .col-6 {
-    width: 100%;
-  }
-}
-
 #nw-navigation .nw-nav-column {
   align-items: center;
   display: flex;
@@ -391,48 +370,6 @@ p.card-text {
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 1200px) {
-  .card-featured-proj {
-    right: 0px;
-  }
-  .featured-image-col {
-    width: 65%;
-  }
-
-  .skills-cards {
-    height: 100%;
-  }
-}
-
-@media only screen and (max-width: 1020px) {
-  .card-featured-proj {
-    bottom: 25px;
-  }
-  .featured-image-col {
-    width: 100%;
-    padding: 0;
-  }
-  .pb-col {
-    width: 100%;
-  }
-  .nw-social-icons i {
-    font-size: 3.7vmin;
-  }
-  .nw-link {
-    font-size: 2.7vmin;
-  }
-
-  .contact-wrapper .card {
-    width: 90% !important;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .skills-cards {
-    height: 420px;
-  }
-}
-
 /*  */
 
 /* form */
@@ -593,13 +530,119 @@ select.nw-form-control {
   font-weight: bold;
 }
 
-.progress-dropdown-card .nw-subheading {
-  font-size: 2.4vmin;
-}
-
 .progress-dropdown-card.hide {
   display: none;
 }
 .progress-dropdown-card.show {
   display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+  .skills-cards {
+    height: 420px;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1200px) {
+  .card-featured-proj {
+    right: 0px;
+  }
+  .featured-image-col {
+    width: 65%;
+  }
+
+  .skills-cards {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1020px) {
+  .card-featured-proj {
+    bottom: 25px;
+  }
+  .featured-image-col {
+    width: 100%;
+    padding: 0;
+  }
+  .pb-col {
+    width: 100%;
+  }
+  .nw-social-icons i {
+    font-size: 3.7vmin;
+  }
+  .nw-link {
+    font-size: 2.7vmin;
+  }
+
+  .contact-wrapper .card {
+    width: 90% !important;
+  }
+  .contact-me-header {
+    font-size: 10vmin !important;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1000px) {
+  #nw-navigation {
+    display: block;
+  }
+  #nw-navigation .home-column {
+    width: 100%;
+  }
+  #nw-navigation .nw-nav-column {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  .nw-subheading {
+    font-size: 5vmin;
+  }
+  #contact-form .col-6 {
+    width: 100%;
+  }
+  .nw-item-label {
+    font-size: 5.5vmin !important;
+  }
+  .nw-subheading {
+    font-size: 2vmin;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 840px) {
+  .pb-col {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  .nw-subheading {
+    font-size: 4vmin;
+  }
+  .featured-image-col {
+    width: 80%;
+  }
+  .progress-dropdown-card .nw-subheading {
+    font-size: 4.4vmin;
+  }
+  .nw-item-label button {
+    font-size: 3.2vmin;
+  }
+  .nw-item-label i {
+    font-size: 4vmin;
+  }
+  .skills-header {
+    font-size: 8vmin;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1020px) {
+  .progress-dropdown-card .nw-subheading {
+    font-size: 3.4vmin;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .progress-dropdown-card .nw-subheading {
+    font-size: 2.4vmin;
+  }
 }
