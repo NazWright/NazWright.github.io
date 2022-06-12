@@ -12,7 +12,7 @@ async function fillProgressBars() {
   console.log("running");
 
   console.log(progressBarOutlines.length);
-  const fillPerecentages = [85, 85, 60, 80, 40];
+  const fillPerecentages = [85, 85, 60, 80, 40, 65];
 
   //if (fillPerecentages !== numberOfProgressBars) return;
 

@@ -163,8 +163,10 @@ main {
 }
 .nw-subheading {
   color: rgb(158, 120, 251);
-  font: bold 1.5rem / 1 FontAwesome;
-  font-size: 2.5vmin;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 5vmin;
+  font-style: italic;
 }
 
 .nw-subheading.center {
@@ -311,7 +313,10 @@ main {
 }
 #featured-project .card-title {
   color: #9e78fb;
-  font: 700 normal normal 1.5rem/1 FontAwesome;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
 }
 p.card-text {
   color: grey;
@@ -395,14 +400,20 @@ p.card-text {
 
 @media only screen and (max-width: 1020px) {
   .card-featured-proj {
-    bottom: 75px;
+    bottom: 25px;
   }
-  .featured-image-col,
+  .featured-image-col {
+    width: 100%;
+    padding: 0;
+  }
   .pb-col {
     width: 100%;
   }
   .nw-social-icons i {
     font-size: 3.7vmin;
+  }
+  .nw-link {
+    font-size: 3.5vmin;
   }
 }
 
@@ -541,4 +552,44 @@ select.nw-form-control {
   height: 6vmin;
   border-radius: 16px;
   box-shadow: 4px 4px 3px black;
+}
+
+/* progressbar dropdown icon */
+.nw-item-label i {
+  cursor: pointer;
+  font-size: 3vmin;
+  color: #9e78fb;
+}
+
+.nw-item-label i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(241, 175, 12);
+}
+
+.nw-item-label i:active {
+  cursor: pointer;
+  transform: scale(0.9);
+  color: rgb(12, 176, 241);
+}
+
+.nw-item-label button {
+  background: transparent;
+  border: none;
+  color: #9e78fb;
+  font-size: 2vmin;
+  font-style: italic;
+  color: grey;
+  font-weight: bold;
+}
+
+.progress-dropdown-card .nw-subheading {
+  font-size: 2.4vmin;
+}
+
+.progress-dropdown-card.hide {
+  display: none;
+}
+.progress-dropdown-card.show {
+  display: block;
 }
