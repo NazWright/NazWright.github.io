@@ -79,14 +79,14 @@ main {
   flex-direction: column;
 }
 
-#headline h2 {
+#headline h1 {
   color: #f3bc31;
   letter-spacing: 2px;
   text-shadow: 2px 2px 2px #000, 2px 3px 4px #000, 2px 4px 6px #000,
     2px 5px 8px #000;
   font-size: 8vmin;
 }
-#headline h3 {
+#headline h2 {
   color: #fff;
   font-style: italic;
   font-size: 4vmin;
@@ -326,6 +326,7 @@ p.card-text {
   font-size: 35px;
   margin-bottom: 2rem;
   text-shadow: 3px 3px 3px #f39206;
+  color: white !important;
 }
 .features-boxed {
   padding: 2rem;
