@@ -755,3 +755,14 @@ select.nw-form-control {
 .default-project-content .nw-grey-text {
   font-size: 2vmin;
 }
+
+.nw-button.action-button {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nw-button.action-button {
+  font-size: 2vmin;
+}
