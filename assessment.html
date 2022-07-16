@@ -1,15 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100vh;">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Assessment Form</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact form to submit a question or leave a review." />
+    <link rel="icon" href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="apple-touch-icon" href="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <title>
+        Website Assessment Form
+    </title>
 </head>
 
 <body>
+    <div id="root">
+        <div class="main-app" id="nw-bg-video-wrapper">
+            <!-- video background start -->
+            <video playsInline autoPlay loop muted id="nw-background-video"
+                poster="https://nxwv1images.s3.amazonaws.com/video-background-poster.png">
+                <source type="video/mp4" src="https://nxwv1images.s3.amazonaws.com/codingvidres.mp4">
+                </source>
+            </video>
+            <!-- video background end -->
 
+            <!-- navigation -->
+            <nav id="nw-navigation">
+                <div class="col-2 nw-nav-column home-column">
+                    <a href="./index.html">
+                        <img id="nw-logo-home-link" src="https://nxwv1images.s3.amazonaws.com/Nazere+Wright.png"
+                            alt="Nazere Wright's logo & link to home page" />
+                    </a>
+                </div>
+                <div class="col-8 nw-nav-column">
+                    <div class="nw-nav-column-link">
+                        <a href="./projects.html">Projects</a>
+                    </div>
+                    <div class="nw-nav-column-link">
+                        <a href="./skills.html">Skills</a>
+                    </div>
+                    <div class="nw-nav-column-link">
+                        <a href="./contact.html">Contact</a>
+                    </div>
+                    <div class="nw-nav-column-link">
+                        <a href="https://medium.com/@nazwrightthedeveloper" target="_blank">Blog</a>
+                    </div>
+                </div>
+                <div class="col-2 nw-nav-column">
+                    <div class="nw-social-icons">
+
+                        <a class="nw-button action-button" href="./assessment.html">
+                            Launch your website now
+                        </a>
+
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- main content -->
+            <main id="content">
+                <div class="contact-wrapper">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="contact-me-header nw-section-title">Website Assessment</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="website-assessment-desc mb-4 nw-grey-text">
+                                This assessment is geared towards gaining a better understanding of your needs and
+                                desires when it comes to your website experience. Please answer as many questions as
+                                applicable to ensure that needs are fully comprehended. After submitting this form,
+                                please allow up to 24 hours to receive an email response for further information on a
+                                quote.
+                            </p>
+                            <form id="assessment-form">
+                                <!-- page 1 -->
+                                <div class="page active">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="text" class="nw-form-control" placeholder="Name" name="name" />
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="email" class="nw-form-control" placeholder="Email"
+                                                name="email" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input type="text" class="nw-form-control"
+                                                placeholder="What is the name of your website?" name="websiteName" />
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="Who is the target audience of your website?"
+                                                name="targetAudience"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="What actions do you want users on your site to take? (i.e. purchase a product, click advertising, request a note, download software, subscribe to a newsletter) Please be descriptive as possible."
+                                                name="websiteActions"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- page 2 -->
+                                <div class="page">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="What is the goal of your website? (i.e. sell a product, drive traffic to social media.)"
+                                                name="websiteGoal"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="Please list all of the important features that you would like on your website. Each on a new line. (i.e. sell a product, promote a book, etc.)"
+                                                name="features"></textarea>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="mockups">Upload any designs or website mockups that you
+                                                have.</label>
+                                            <input name="mockups" type="file"
+                                                placeholder="Upload any designs or website mockups that you have."
+                                                multiple accept=".doc, .docx, .pdf, .png, .jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- page 3 -->
+                                <div class="page">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="What type of feel do you want from your website?"
+                                                name="websiteFeel"></textarea>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="Do you have any specific colors that you want to use?"
+                                                name="brandingColors"></textarea>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="assets">Upload any logos, product images, & other assets you
+                                                would like on your website.</label>
+                                            <input name="assets" type="file"
+                                                placeholder="Upload any designs or website mockups that you have."
+                                                multiple accept=".doc, .docx, .pdf, .png, .jpg" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- page 4 -->
+                                <div class="page">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <textarea type="text" class="nw-form-control"
+                                                placeholder="List any websites that you feel inspired by. (Separate each by a new line)"
+                                                name="websiteInspos"></textarea>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <input type="text" class="nw-form-control"
+                                                placeholder="What is your timeline for the project? (number of weeks or months)"
+                                                name="timeline" />
+                                        </div>
+
+                                        <div class="col-12">
+                                            <input type="text" class="nw-form-control"
+                                                placeholder="How do you prefer to communicate? (i.e. phone, text, Zoom, Skype)"
+                                                name="communication" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- page 5 -->
+
+                                <div class="page">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label>Do you have a hosting provider? (i.e. WordPress, Wix,
+                                                Bluehost)</label><br>
+                                            <input type="radio" name="hosting" value="Yes" id="Yes" />
+                                            <label for="Yes">Yes</label>
+
+                                            <input type="radio" name="hosting" value="No" id="No" />
+                                            <label for="No">No</label>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label>Do you have a domain name? </label><br>
+                                            <input type="radio" name="domain" value="Yes" id="Yesdomain" />
+                                            <label for="Yesdomain">Yes</label>
+
+                                            <input type="radio" name="domain" value="No" id="Nodomain" />
+                                            <label for="Nodomain">No</label>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 d-flex">
+                                        <button class="nw-button" type="button" id="back"><i
+                                                class="fa fa-arrow-left"></i>Previous
+                                            Page</button>
+                                    </div>
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <button class="nw-button" type="button" id="next">Next Page <i
+                                                class="fa fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end main content -->
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </script>
+    <script type="module">
+        import { submitAssessment } from "./js/firebase-init.js";
+        window.submitAssessment = submitAssessment; 
+    </script>
+    <script src="./js/assessment.js"></script>
 </body>
+
+
 
 </html>

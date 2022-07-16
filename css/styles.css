@@ -1493,3 +1493,21 @@ a {
   z-index: 1000;
   cursor: pointer;
 }
+
+/* website assessment form */
+
+.website-assessment-desc {
+  font-style: italic;
+}
+
+#back.nw-button {
+  display: none;
+}
+/* initially hide all of the pages that are not active */
+#assessment-form .page:not(.active) {
+  display: none;
+}
+
+#assessment-form .page.active {
+  display: block;
+}
