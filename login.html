@@ -113,8 +113,6 @@
 
         loginButton.addEventListener('click', function (event) {
             event.preventDefault();
-            // clear the inputs
-            debugger;
             const isValid = validateFields(username.value, password.value);
             if (!isValid) return;
             // only processing valid submissions
@@ -134,23 +132,9 @@
             window.location.href = url;
         }
 
-        function disableButtonIfNoText(username, password) {
-            if (!username || !password) {
-                disableButton("login");
-            }
-        }
-
-        function disableButton(buttonId, message) {
-            if (!buttonId) throw new Error("No Button ID");
-            const button = document.getElementById(buttonId);
-            // only alert if there is a message
-            message && alert(message);
-            button.disabled = true;
-        }
-
-
         function showErrorMessage(message) {
-            alert(message);
+            message && alert(message);
+            if (!message) throw new Error("No message found");
         }
 
         function validateFields(username, password) {
