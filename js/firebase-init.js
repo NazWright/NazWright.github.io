@@ -32,3 +32,14 @@ export function submitAssessment(assessmentData) {
     ...assessmentData,
   });
 }
+
+export function createProject(projectData) {
+  set(ref(database, "projects/" + projectData.id));
+}
+
+export function authenticateUser(username, password) {
+  // check if the user is in the database.
+  // if the user is not then return false
+  // or else return true
+  set(ref(database, "users/" + username), { username, password });
+}
