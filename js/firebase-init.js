@@ -32,3 +32,7 @@ export function submitAssessment(assessmentData) {
     ...assessmentData,
   });
 }
+
+export function createProject(projectData) {
+  set(ref(database, "projects/" + projectData.id));
+}
