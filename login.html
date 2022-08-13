@@ -67,14 +67,14 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <input type="text" class="nw-form-control" placeholder="Username"
-                                            name="username" />
+                                            name="username" id="username" />
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-12">
                                         <input type="password" class="nw-form-control" placeholder="Password"
-                                            name="password" />
+                                            name="password" id="password" />
                                     </div>
                                 </div>
 
@@ -104,11 +104,65 @@
         </div>
     </div>
     <script type="text/javascript">
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        const form = document.getElementById("login-form");
+
+
         const loginButton = document.getElementById("login");
+
         loginButton.addEventListener('click', function (event) {
             event.preventDefault();
-            window.location.href = "/dashboard.html";
-        })
+            // clear the inputs
+            debugger;
+            const isValid = validateFields(username.value, password.value);
+            if (!isValid) return;
+            // only processing valid submissions
+            processSubmission(username.value, password.value);
+            redirect("/dashboard.html");
+            form.reset();
+        });
+
+        function processSubmission(username, password) {
+            console.log("yayy we are at the submission stage!!!");
+            console.log(username);
+            console.log(password);
+        }
+
+
+        function redirect(url) {
+            window.location.href = url;
+        }
+
+        function disableButtonIfNoText(username, password) {
+            if (!username || !password) {
+                disableButton("login");
+            }
+        }
+
+        function disableButton(buttonId, message) {
+            if (!buttonId) throw new Error("No Button ID");
+            const button = document.getElementById(buttonId);
+            // only alert if there is a message
+            message && alert(message);
+            button.disabled = true;
+        }
+
+
+        function showErrorMessage(message) {
+            alert(message);
+        }
+
+        function validateFields(username, password) {
+            // if either one of these is not filled
+            const userNameOrPasswordIsBlank = !username || !password;
+
+            if (userNameOrPasswordIsBlank) {
+                showErrorMessage("Invalid username and password combination.");
+                return false;
+            }
+            return true;
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
