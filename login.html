@@ -103,6 +103,10 @@
 
         </div>
     </div>
+    <script type="module">
+        import { authenticateUser } from "./js/firebase-init.js";
+        window.authenticateUser = authenticateUser; 
+    </script>
     <script type="text/javascript">
         var username = document.getElementById("username");
         var password = document.getElementById("password");
@@ -117,16 +121,13 @@
             if (!isValid) return;
             // only processing valid submissions
             processSubmission(username.value, password.value);
-            redirect("/dashboard.html");
+            //redirect("/dashboard.html");
             form.reset();
         });
 
         function processSubmission(username, password) {
-            console.log("yayy we are at the submission stage!!!");
-            console.log(username);
-            console.log(password);
+            window.authenticateUser && window.authenticateUser(username, password);
         }
-
 
         function redirect(url) {
             window.location.href = url;
@@ -135,6 +136,9 @@
         function showErrorMessage(message) {
             message && alert(message);
             if (!message) throw new Error("No message found");
+
+            // take in an element as the param
+            // show the error element
         }
 
         function validateFields(username, password) {
