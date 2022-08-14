@@ -66,7 +66,7 @@
                             <form id="login-form">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" class="nw-form-control" placeholder="Username"
+                                        <input type="email" class="nw-form-control" placeholder="Username"
                                             name="username" id="username" />
                                     </div>
                                 </div>
@@ -115,36 +115,34 @@
 
         const loginButton = document.getElementById("login");
 
-        loginButton.addEventListener('click', function (event) {
+        loginButton.addEventListener('click', async function (event) {
             event.preventDefault();
-            const isValid = validateFields(username.value, password.value);
+            const isValid = validateEmailAndPassword(username.value, password.value);
             if (!isValid) return;
             // only processing valid submissions
-            processSubmission(username.value, password.value);
-            //redirect("/dashboard.html");
-            form.reset();
+            if (await canProcessSubmission(username.value, password.value)) {
+                alert("Successful Login. Press OK to go to dashboard.");
+                redirect("/dashboard.html");
+            }
+            else {
+                alert("Incorrect Password & Username Combination");
+                form.reset();
+                return;
+            }
+
         });
 
-        function processSubmission(username, password) {
-            window.authenticateUser && window.authenticateUser(username, password);
+        function canProcessSubmission(username, password) {
+            return window.authenticateUser(username, password);
         }
 
         function redirect(url) {
             window.location.href = url;
         }
 
-        function showErrorMessage(message) {
-            message && alert(message);
-            if (!message) throw new Error("No message found");
-
-            // take in an element as the param
-            // show the error element
-        }
-
-        function validateFields(username, password) {
+        function validateEmailAndPassword(username, password) {
             // if either one of these is not filled
             const userNameOrPasswordIsBlank = !username || !password;
-
             if (userNameOrPasswordIsBlank) {
                 showErrorMessage("Invalid username and password combination.");
                 return false;

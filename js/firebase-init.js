@@ -8,6 +8,7 @@ import {
 import {
   getAuth,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js";
 
 // Firebase configuration
@@ -44,25 +45,50 @@ export function createProject(projectData) {
   set(ref(database, "projects/" + projectData.id));
 }
 
-export function authenticateUser(username, password) {
-  // check if the user is in the database.
-  // if the user is not then return false
-  // or else return true
-  set(ref(database, "users/" + username), { username, password });
+function runFirebaseAuthError(error) {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  console.error(errorCode + " " + errorMessage);
 }
 
-export async function createUser(username, password) {
+export async function authenticateUser(username, password) {
   const auth = getAuth();
   try {
-    const userCredentials = await createUserWithEmailAndPassword(
+    const userCredentials = await signInWithEmailAndPassword(
       auth,
       username,
       password
     );
     // user is signed in
     const user = userCredentials.user;
+    console.log(userCredentials);
+    if (user.email) {
+      return true;
+    }
+    return false;
   } catch (error) {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+    runFirebaseAuthError(error);
+    return false;
+  }
+}
+
+export async function createUser(email, password) {
+  const auth = getAuth();
+  try {
+    const userCredentials = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    // user is signed in
+    const user = userCredentials.user;
+    if (user) {
+      console.log(user);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    runFirebaseAuthError(error);
+    return false;
   }
 }
