@@ -5,6 +5,10 @@ import {
   ref,
   set,
 } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -22,6 +26,9 @@ const app = initializeApp(firebaseConfig);
 
 // intialize database
 const database = getDatabase(app);
+
+// intialize authentication
+const auth = getAuth(app);
 
 export function submitAssessment(assessmentData) {
   const currentDate = new Date();
@@ -42,4 +49,20 @@ export function authenticateUser(username, password) {
   // if the user is not then return false
   // or else return true
   set(ref(database, "users/" + username), { username, password });
+}
+
+export async function createUser(username, password) {
+  const auth = getAuth();
+  try {
+    const userCredentials = await createUserWithEmailAndPassword(
+      auth,
+      username,
+      password
+    );
+    // user is signed in
+    const user = userCredentials.user;
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  }
 }
