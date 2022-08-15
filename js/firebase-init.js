@@ -42,7 +42,7 @@ export function submitAssessment(assessmentData) {
 }
 
 export function createProject(projectData) {
-  set(ref(database, "projects/" + projectData.id));
+  set(ref(database, "projects/" + projectData.projectName));
 }
 
 function runFirebaseAuthError(error) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100vh;">
 
 <head>
     <meta charset="UTF-8">
@@ -54,23 +54,124 @@
                 </div>
                 <!-- add project -->
                 <div class="col-2 nw-nav-column d-flex justify-content-center">
-
-                    <a class="nw-button action-button w-50" id="add-project" href="#" target="_blank">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary nw-button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
                         Add Project
-                    </a>
+                    </button>
 
                 </div>
             </nav>
             <!-- end navigation -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Project</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- add project form -->
+                            <form id="add-project-form">
+                                <div class="mb-3">
+                                    <label for="projectName" class="form-label">Project Name</label>
+                                    <input type="text" class="form-control" required id="project-name"
+                                        name="project-name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="website">Website</label>
+                                    <input type="url" class="form-control" id="website" name="website" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="github">GitHub</label>
+                                    <input type="url" class="form-control" id="github" name="github" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="description">Description</label>
+                                    <textarea class="form-control" id="description" required
+                                        name="description"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary nw-button" id="add-project">Add New
+                                    Project</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
+        <script type="module">
+            import { createProject } from "./js/firebase-init.js";
+            window.createProject = createProject; 
+        </script>
 
-    <script>
-        const addProjectButton = document.getElementById("add-project");
-        // display a modal
-    </script>
+        <script>
+            const addNewProjectButton = document.getElementById("add-project");
+            const form = document.getElementById("add-project-form");
 
+            function fieldIsValidFormField(field) {
+                return field.name ? true : false;
+            }
+
+            function elementIsAButton(element) {
+                return element.type === "button" || element.type === "submit";
+            }
+
+            function getValuesFromForm(formElement) {
+                var formValues = {};
+
+                for (let field of formElement) {
+                    const formChildIsButton = elementIsAButton(field);
+                    const fieldIsValid = fieldIsValidFormField(field);
+                    if (!elementIsAButton(field) && fieldIsValidFormField(field)) {
+                        formValues[field.name] = field.value;
+                    }
+
+                }
+                return formValues;
+            }
+
+            function hasGitHubOrWebsite(github, website) {
+                return !github && !website ? false : true;
+            }
+
+            function requiredFieldIsEmpty(field) {
+                if (!field.required) return false;
+                return field.required && !field.value ? true : false
+            }
+
+            function requiredFieldsAreNotEmpty(form) {
+                for (let field of form) {
+                    if (requiredFieldIsEmpty(field)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            function handleSubmitNewProject(event) {
+                event.preventDefault();
+                alert("Are you sure you would like to add a new project?");
+                const form = document.getElementById("add-project-form");
+                const formValues = getValuesFromForm(form);
+                if (hasGitHubOrWebsite(formValues.github, formValues.website)
+                    && requiredFieldsAreNotEmpty(form)
+                ) {
+                    createProject(formValues);
+                }
+                // else show error
+            }
+
+            addNewProjectButton.addEventListener("click", handleSubmitNewProject);
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
