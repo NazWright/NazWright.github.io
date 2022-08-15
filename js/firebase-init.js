@@ -41,9 +41,16 @@ export function submitAssessment(assessmentData) {
   });
 }
 
-export function createProject(projectData) {
+export async function createProject(projectData) {
   console.log(projectData);
-  set(ref(database, "projects/" + projectData.projectName), { ...projectData });
+  const submission = await set(
+    ref(database, "projects/" + projectData.projectName),
+    {
+      ...projectData,
+    }
+  );
+  console.log(submission);
+  return submission;
 }
 
 function runFirebaseAuthError(error) {

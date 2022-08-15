@@ -124,7 +124,7 @@
                 return !github && !website ? false : true;
             }
 
-            function handleSubmitNewProject(event) {
+            async function handleSubmitNewProject(event) {
                 event.preventDefault();
                 alert("Are you sure you would like to add a new project?");
                 const form = document.getElementById("add-project-form");
