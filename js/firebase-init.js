@@ -42,7 +42,8 @@ export function submitAssessment(assessmentData) {
 }
 
 export function createProject(projectData) {
-  set(ref(database, "projects/" + projectData.projectName));
+  console.log(projectData);
+  set(ref(database, "projects/" + projectData.projectName), { ...projectData });
 }
 
 function runFirebaseAuthError(error) {
