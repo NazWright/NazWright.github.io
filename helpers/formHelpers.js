@@ -10,8 +10,6 @@ export function getValuesFromForm(formElement) {
   var formValues = {};
 
   for (let field of formElement) {
-    const formChildIsButton = elementIsAButton(field);
-    const fieldIsValid = fieldIsValidFormField(field);
     if (!elementIsAButton(field) && fieldIsValidFormField(field)) {
       formValues[field.name] = field.value;
     }

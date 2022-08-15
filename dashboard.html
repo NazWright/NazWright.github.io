@@ -108,67 +108,36 @@
 
         <script type="module">
             import { createProject } from "./js/firebase-init.js";
-            window.createProject = createProject; 
+            import { getValuesFromForm, requiredFieldsAreNotEmpty } from "./helpers/formHelpers.js";
+            window.createProject = createProject;
+            window.getValuesFromForm = getValuesFromForm;
+            window.requiredFieldsAreNotEmpty = requiredFieldsAreNotEmpty;
         </script>
 
         <script>
-            const addNewProjectButton = document.getElementById("add-project");
             const form = document.getElementById("add-project-form");
 
-            function fieldIsValidFormField(field) {
-                return field.name ? true : false;
-            }
-
-            function elementIsAButton(element) {
-                return element.type === "button" || element.type === "submit";
-            }
-
-            function getValuesFromForm(formElement) {
-                var formValues = {};
-
-                for (let field of formElement) {
-                    const formChildIsButton = elementIsAButton(field);
-                    const fieldIsValid = fieldIsValidFormField(field);
-                    if (!elementIsAButton(field) && fieldIsValidFormField(field)) {
-                        formValues[field.name] = field.value;
-                    }
-
-                }
-                return formValues;
-            }
+            const addNewProjectButton = document.getElementById("add-project");
+            addNewProjectButton.addEventListener("click", handleSubmitNewProject);
 
             function hasGitHubOrWebsite(github, website) {
                 return !github && !website ? false : true;
-            }
-
-            function requiredFieldIsEmpty(field) {
-                if (!field.required) return false;
-                return field.required && !field.value ? true : false
-            }
-
-            function requiredFieldsAreNotEmpty(form) {
-                for (let field of form) {
-                    if (requiredFieldIsEmpty(field)) {
-                        return false;
-                    }
-                }
-                return true;
             }
 
             function handleSubmitNewProject(event) {
                 event.preventDefault();
                 alert("Are you sure you would like to add a new project?");
                 const form = document.getElementById("add-project-form");
-                const formValues = getValuesFromForm(form);
+                const formValues = window.getValuesFromForm(form);
                 if (hasGitHubOrWebsite(formValues.github, formValues.website)
-                    && requiredFieldsAreNotEmpty(form)
+                    && window.requiredFieldsAreNotEmpty(form)
                 ) {
-                    createProject(formValues);
+                    console.log("valid");
+                    // window.createProject(formValues);
                 }
                 // else show error
             }
 
-            addNewProjectButton.addEventListener("click", handleSubmitNewProject);
 
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
